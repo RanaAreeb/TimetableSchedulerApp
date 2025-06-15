@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:name=".TimetableSchedulerApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TimetableScheduler"
+        tools:targetApi="31">
+
+        <!-- Main Activity -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.TimetableScheduler">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Auth Activity -->
+        <activity
+            android:name=".ui.screens.auth.AuthActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TimetableScheduler" />
+
+        <!-- Onboarding Activity -->
+        <activity
+            android:name=".ui.screens.onboarding.OnboardingActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TimetableScheduler" />
+
+        <!-- Dashboard Activities with NoActionBar theme -->
+        <activity
+            android:name=".ui.screens.student.StudentDashboardActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TimetableScheduler.NoActionBar" />
+
+        <activity
+            android:name=".ui.screens.teacher.TeacherDashboardActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TimetableScheduler.NoActionBar" />
+
+        <activity
+            android:name=".ui.screens.coordinator.CoordinatorDashboardActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TimetableScheduler.NoActionBar" />
+
+        <!-- Other Activities -->
+        <activity
+            android:name=".ui.screens.timetable.TimetableViewerActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TimetableScheduler.NoActionBar" />
+
+        <activity
+            android:name=".ui.screens.notifications.NotificationsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TimetableScheduler.NoActionBar" />
+
+        <activity
+            android:name=".ui.screens.teacher.SendNotificationActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TimetableScheduler.NoActionBar" />
+
+        <activity
+            android:name=".ui.screens.teacher.ClassListActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TimetableScheduler.NoActionBar" />
+
+        <activity
+            android:name=".ui.screens.student.ContactTeacherActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TimetableScheduler.NoActionBar" />
+
+        <activity
+            android:name=".ui.screens.coordinator.GenerateTimetableActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TimetableScheduler.NoActionBar" />
+
+        <activity
+            android:name=".ui.screens.coordinator.AssignTimetableActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TimetableScheduler.NoActionBar" />
+
+        <activity
+            android:name=".ui.screens.coordinator.ReportsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TimetableScheduler.NoActionBar" />
+
+        <!-- Firebase Messaging Service -->
+        <service
+            android:name=".services.FirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!-- FCM Service -->
+        <service
+            android:name=".services.FCMService"
+            android:exported="false" />
+
+        <!-- Notification Service -->
+        <service
+            android:name=".services.NotificationService"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

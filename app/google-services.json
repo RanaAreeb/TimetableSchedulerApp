@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "359481696506",
+    "project_id": "time-c74a6",
+    "storage_bucket": "time-c74a6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:359481696506:android:97dd95e12257f6c745a943",
+        "android_client_info": {
+          "package_name": "com.example.timeatbleschedulerapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoR2F2sRBWLKdQZONK2pacMyGd95Y2Ql0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
